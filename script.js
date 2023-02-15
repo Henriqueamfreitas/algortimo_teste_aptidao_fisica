@@ -1,6 +1,6 @@
 // Variáveis para aplicar os resultados do teste. Não as altere.
 
-gender = process.argv[2]; // Sexo 
+gender = process.argv[2]; // Sexo1
 height = process.argv[3]; // Altura
 barReps = process.argv[4]; // Repetições com barra
 barSeconds = process.argv[5]; // Tempo das repetições com barra 
