@@ -21,9 +21,11 @@ let passed = false;
 // if (gender === "male")  
 // **sua lógica a partir daqui**
 if(((gender==="male" && height>=1.70 && abs>=41) && (barReps>=6 || barSeconds<=15) && ((runDistance>=3000 && runTime<=720) || (runDistance>=5000 && runTime<=1200)) && ((swimDistance>=100 && swimTime<=60) || diveTime<=30)) || ((gender==="female" && height>=1.60 && abs>=41) && (barReps>=5 || barSeconds<=12) && ((runDistance>=4000 && runTime<=900) || (runDistance>=6000 && runTime<=1320)) && ((swimDistance>=100 && swimTime<=60) || diveTime<=30))){
-    console.log(passed);
+    passed=true;
+}else{
+    
 }
 
 // Deve conter apenas esse console.log no seu código.
 // Senão os testes não irão funcionar.
-// console.log(passed);
+console.log(passed);
