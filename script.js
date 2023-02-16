@@ -20,7 +20,18 @@ let passed = false;
 // Sugestão para começar:
 // if (gender === "male")  
 // **sua lógica a partir daqui**
-if(((gender==="male" && height>=1.70 && abs>=41) && (barReps>=6 || barSeconds<=15) && ((runDistance>=3000 && runTime<=720) || (runDistance>=5000 && runTime<=1200)) && ((swimDistance>=100 && swimTime<=60) || diveTime<=30)) || ((gender==="female" && height>=1.60 && abs>=41) && (barReps>=5 || barSeconds<=12) && ((runDistance>=4000 && runTime<=900) || (runDistance>=6000 && runTime<=1320)) && ((swimDistance>=100 && swimTime<=60) || diveTime<=30))){
+if(( //Vamos fazer primeiro a restrição do sexo masculino
+    (gender==="male" && height>=1.70 && abs>=41) //Homem, pelo menos 1,70m E pelo menos 41 abdominais
+    && (barReps>=6 || barSeconds<=15)  //pelo menos 6 repetições na barra OU no máximo 15 segundos
+    && ((runDistance>=3000 && runTime<=720) || (runDistance>=5000 && runTime<=1200)) //pelo menos 3000m em no máximo 720s OU pelo menos 5000 metros em no máximo 1200s
+    && ((swimDistance>=100 && swimTime<=60) || diveTime<=30) //nadou no mínimo 100 metros em no máximo 60s OU no máximo 30 segundos de mergulho
+    )
+     || ( //Agora, vamos fazer a restrição do sexo feminino
+        (gender==="female" && height>=1.60 && abs>=41) //Mulher, pelo menos 1,60m E pelo menos 41 abdominais 
+        && (barReps>=5 || barSeconds<=12) //pelo menos 5 repetições na barra OU no máximo 12 segundos
+        && ((runDistance>=4000 && runTime<=900) || (runDistance>=6000 && runTime<=1320)) //pelo menos 4000m em no máximo 900s OU pelo menos 6000 metros em no máximo 1320s
+        && ((swimDistance>=100 && swimTime<=60) || diveTime<=30) //nadou no mínimo 100 metros em no máximo 60s OU no máximo 30 segundos de mergulho
+        )){
     passed=true;
 }else{
     
